@@ -1,0 +1,65 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Panel lateral */
+.nav {
+    display: flex;
+    background-color: #6c02e3;
+    width: 100%;
+    height: 10vh;
+}
+
+.nav img {
+    width: 300px;
+
+}
+ul.lists {
+    display: flex;
+    list-style: none;
+}
+
+ul.lists li {
+    transition: background-color 0.3s ease;
+}
+
+ul.lists li:hover {
+    background-color: #ffffff;
+}
+
+ul.lists li button {
+    display: flex;
+    background: none;
+    border: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+ul.lists li:hover button {
+    color: #000;
+}
+
+ul.lists li i {
+    font-size: 22px;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 20%;
+    padding: 20px;
+    width: 80%;
+}
+
+.content {
+    display: none;
+}
+
+.content.visible {
+    display: flex;
+}

@@ -1,0 +1,53 @@
+*{
+    background: url('');
+}
+
+.principal{
+    margin: auto;
+    padding: 0;
+    display: flex;
+}
+
+.imgperfil{
+    display: flex;
+    margin: auto;
+}
+
+.imgperfil img{
+    border-radius: 5%;
+    width: 350px;
+}
+
+.datos{
+    width: 55%;
+    text-align: left;
+    margin: auto;
+}
+
+.asig{
+    width: 180px;
+}
+
+.nombres,.correo,.numero,.contraseña{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.contraseña input {
+    width: 100px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+/*
+.password-container .toggle-password {
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    color: #555;
+    transition: color 0.2s;
+}*/

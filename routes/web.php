@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+use App\Http\Controllers\DocenteController;
+Route::get('/perfil-docente',[DocenteController::class, 'perfilDocente'])->name('perfil.docente');
+Route::get('/cursos-docente', [DocenteController::class, 'cursosDocente'])->name('cursos.docente');
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +18,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('cursos');
+});
+/*
+Route::get('/perfildoc', function () {
+    return view('perfildoc');
+});
+*/
+Route::get('/actividades', function () {
+    return view('actividades');
+});
+
+Route::get('/comunicaciones', function () {
+    return view('comunicaciones');
+});
+
+Route::get('/horario', function () {
+    return view('horario');
 });

@@ -15,17 +15,14 @@ class Docente extends Model
         'apellidos',
         'correo_academico',
         'telefono',
-        'foto',
-        'password'
+        'foto'
     ];
-
-    public function cursos()
-{
-    return $this->belongsToMany(
-        Curso::class,      // modelo relacionado
-        'docente_curso',   // tabla pivote
-        'id_docente',      // columna en pivote para el docente
-        'id_curso'         // columna en pivote para el curso
-    )->withPivot('ciclo');
+    public function cursos(){
+        return $this->belongsToMany(
+            Curso::class,      // modelo relacionado
+            'docente_curso',   // tabla pivote
+            'id_docente',      // columna en pivote para el docente
+            'id_curso'         // columna en pivote para el curso
+        )->withPivot('ciclo');
 }
 }

@@ -18,10 +18,11 @@ Route::get('/cursos-docente', [DocenteController::class, 'cursosDocente'])->name
 |
 */
 
-
+// Página inicial (formulario de login)
 Route::get('/', function () {
-    return view('cursos');
+    return view('layouts.login'); // tu vista ahora se llama login.blade.php
 });
+
 /*
 Route::get('/perfildoc', function () {
     return view('perfildoc');
@@ -38,3 +39,22 @@ Route::get('/comunicaciones', function () {
 Route::get('/horario', function () {
     return view('horario');
 });
+
+
+
+
+// Procesar login
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+// Dashboards
+Route::get('/admin/dashboard', function () {
+    return view('admin'); // admin.blade.php
+})->name('admin.dashboard');
+
+Route::get('/docente/dashboard', function () {
+    return view('cursos'); // docente.blade.php
+})->name('cursos.dashboard');
+
+Route::get('/alumno/dashboard', function () {
+    return view('student'); // student.blade.php
+})->name('alumno.dashboard');
